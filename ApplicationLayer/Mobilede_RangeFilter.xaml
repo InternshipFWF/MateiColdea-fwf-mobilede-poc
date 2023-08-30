@@ -1,0 +1,175 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Mobilede_RangeFilter" this:Mobilede_RangeFilter.in_FilterType="Power" this:Mobilede_RangeFilter.in_FirstSelection="100" this:Mobilede_RangeFilter.in_SecondSelection="200" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FilterType" Type="InArgument(x:String)" />
+    <x:Property Name="in_FirstSelection" Type="InArgument(x:String)" />
+    <x:Property Name="in_SecondSelection" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1840,1382.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Mobilede_RangeFilter_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Mobilede_RangeFilter" sap:VirtualizedContainerService.HintSize="546,1318" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FirstSelector" />
+      <Variable x:TypeArguments="x:String" Name="SecondSelector" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Range Filter" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Range Filter&quot;]" />
+    <Assign DisplayName="Assign First Selector - Filter Cars" sap:VirtualizedContainerService.HintSize="484,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[FirstSelector]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_Config(String.Format("{0}_from",in_FilterType)).ToString.Trim]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign Secnd Selector - Filter Cars" sap:VirtualizedContainerService.HintSize="484,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[SecondSelector]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_Config(String.Format("{0}_to",in_FilterType)).ToString.Trim]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Browser - Filter Cars" sap:VirtualizedContainerService.HintSize="484,820.6666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="8651c7d9-1e66-493b-8aa0-1d78af0fee5a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do Selection Sequence - Filter Cars" sap:VirtualizedContainerService.HintSize="450,601.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into First Filter - Filter Cars" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="8651c7d9-1e66-493b-8aa0-1d78af0fee5a" Text="[in_FirstSelection]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://suchen.mobile.de/fahrzeuge/search.html?dam=0&amp;sb=rel&amp;vc=Car" CvType="InputBox" DesignTimeRectangle="318, 565, 236, 49" DesignTimeScaleFactor="1.350000023841858" ElementType="InputBox" FriendlyName="'INPUT minMileage'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='{0}' tag='INPUT' placeholder='from' /&gt;&quot;, FirstSelector)]" FuzzySelectorArgument="&lt;webctrl id='minMileage' tag='INPUT' name='minMileage' placeholder='from' type='' class='form-control form-control--m' aaname='' /&gt;" Guid="d96723f8-f429-4bb7-990d-74af6e6be028" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPAAAAA1CAYAAAB/cGaVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUoSURBVHhe7d3rTxpLHMbx85dYtxAogWDwFC8oR7zQQqEIoggHtSpS0WpDUZtqq9GYNr44Sf/k58yP6y6sTb1gd8nz4pPW2WFpE78ZZjD419AzJ4jInhgwkY3dGvBocApv06tYKWyhsF7GvxvvichiTANOLuawWiwhPPMKHm8Aw5qrZw4R/RnB8XBdaHquN+D0chHxZBaa44VhnIisoRVvfm3HGLCsvBKvfoyIrEUCzqysYyW/2QlY9rzyspkrL5G1Rebi9f2vbHHbAcuBlQzoJxKR9aQyeSypFVhW4nbActosB1b6iURkPfLS+fWbtDFgeauIp81E1ieHV/OvksaA5TW1fhIRWZO0OhdlwES2xICJbIwBE9kYAyayMQZMZGMMmMjGGDCRjT1uwM898IxOIzjig8Nhcp1o0GheuH2j8Hrc5tf77PEC9iewUzvByUlDIWQyh2jQvNzG55ufuD5ImV/vs0cK2I1wUcL9gOykD0PDbmjPzeYRDZjBCDiAWEUFXM0haHqdaEANVMCVBHym1xWHBy63B1rXuOb0qfHf3DOrld1hMldzyT16703Ud/cJuLlvdruM406v2kv7/Hf6Pn54wL4Edpv73o4iQs/+QUH+XkkhHCujVh9fR6QZnyuYwNpBzfC42vscwl79YUDrHgkEJrLYbe+xa9iJBTDknEa6orvHpxJi/tZjiZ6AScBaSI39UGPfDjHnk7EU9mTO121MLew1rsnXylF+GkOeN3j3tTN2/f0CK2O65/iFhwfsCGA8HEfhQAV0UEQ0PItweAyuVnzVKqq1CgrxeUTisxhRj3GEiqjKtY9lpKOTGPGOYTyaawR6XNZFqLvH4SZSs+res2lsfFRjar+9v3eC6rs0Iuo5I6nNxj1LcfXcun8fUT91BeyeKTcCPS1jytOa1wz4+gbnl2dYy2QQy5RRvZJgv+P020+cH5WxmMxgceMM5zL3SxF+/fPc4uEB15m9hG7Gd1JFdkI3d3ga2aoaP1arsVM3LvypxmrejtD8Hq5oubHi7qcRGG6N+xAtydwS5t2duUR9pQu4E+82Jgzf282Ab/5DaaEz7s9dNFbcizImtNZ4EEtfZO4Fluqr9689QcBFhNuRKWO5+kpZzU52xtp8mN/SR9i5R0g/T63gEnD3PUJ5mVtB7Df+40SPohXwhVpJ6y+Nz7DY8/3XCvgIUf14/Kge8GXZ+PFV0QOZe4XCS93cW/Q/4L2U8WCrGd9u3Pwje4wRNu/RfTh2yz0YMD25VsDi8gaX8uenZbgN8zp74IB+vBnw56JxIbJWwN3xtVbgZbV514/X3bICM2CyqlbAKs6g5lfx3TSizOujHKSA23tg/WFVg/Z3FvvymO49MAMmq+o6xBryqFjlcOqHCrB9kjxIASvtU+jm6XS4eYp8eKzGDGEzYLK47oDF3GHjJPlUVmUZG7CAxV3fB2bAZElmASvB9at6nKeleWjWD/j+7vSTWERk8McDJqL7Y8BENsaAiWyMARPZGAMmsjEGTGRjDJjIxhgwkY0xYCIbMw2Yv+CbyB5MA14pbMHjNf6cMRFZj/yG/oXXKWPAb9OrCM8YPyWAiKxnOb+JWGLJGPBocAqrxRI0x4ueBxCRdSQWc8iubhgDFkl1IZ7MGiYTkbXMzMYa++CFhDFgkV4u1iPmSkxkTbLyprPF+ivmnoCFrMRyUfbEcrDF02ki65CAxycjai/8zjxgIXtiOdiS02l5i0mWbCKyllsDJiLrY8BENsaAiWzLif8B6kgzVTGy+jYAAAAASUVORK5CYII=" InformativeScreenshot="7133752162dc6409d84da3b5e0800146.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvType="Text" DesignTimeRectangle="318, 534, 587, 27" FriendlyName="'Kilometre'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='label' tag='LEGEND' aaname='{0}*' innertext='{0}*' visibleinnertext='{0}*' /&gt;&quot;, in_FilterType)]" FuzzySelectorArgument="&lt;webctrl class='label' tag='LEGEND' aaname='Kilometre' innertext='Kilometre' visibleinnertext='Kilometre' type='' check:text='Kilometre' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAk8AAAAfCAYAAAD+1imwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUvSURBVHhe7d1fSxtLGMfx80r0pm8iIF4WxLuDIAoSCqWCiDceKSgUjxwEoVSREmhRRMlFFGmRIiIiolgOkWAgSC4iiqIQiFh8B8+Z2d3ZmZiN7iI9YPxefGidfWb/ePVj59nxj7b2VwIAAIB4CE8AAAAJEJ4AAAASIDwBAAAkQHgCAABIgPAEAACQgA1PHX3yZmhYBpX+rvqitvZu6Q+ODb7tk1RQP5FZlpmR7qCmU3reBjUDZgwAAKC12PA0sSMXv+7kViksuUVpWTyqeeO3v2rqWNobnzs0Y2eyNqTrJmXr0p9/e7zszAcAAGgdj4SnTpnYvgpCUk1Kq+P+WyflOYense9lqV7XlLxkIo4DAAA080B46pSxVRUygrGL7ckwOHkalu2eT3iygbAoixHHAQAAmmkanvqXik5wmpbXziQt1fPO728aSgfHHglPXWkZ+7gs2ZWcZP5+Jz0d9447fVVez5UKZyO6fuGTjPR0hnWvB6Ylo86x+HE04hw+fW9TmZy61leZMj1aHr8va27fhKeyrDnPED6TN0fVfvgq2cxk/XXC51DB8b15dgAA8FJEhqfStv1/VQWhfmeC0fj2pkl46hiWzKGpddxcSWHFLgO2tS9LIThW+JGTUtWtv5KtDxHnqaprD5j5+lrjkj2KuNZlUbJ/6QDm3GMd/xnCZ7rMy1bY51WWrBee0jK3bd/Ehapl2Zr1+8AAAEDriwxPVk32ZuxbH1e88JSWxWMTQpTzshSOilK5Dn5WKuujQa0NT55LVXviBKEb/9+Lk6IUTu05q7vTjdfSwWz7m2R/HEjJ3JMOWr3jsnFSk2pwLm++0/tkn8nMUceqefV89b1flcNNya7uOPehwt2E/3sBAACt7ZHwpFwfyEzE8lis8DSbj+6Z6hiWtZOgVr/Z6dXjTng63ZSRoHZq1wYle45R2Ti1tYN6LLyWfkvlBL7enJSC+ZXvw95Y47373PBUWnHeJg19k0rUePu07Jkg+O9nZxwAALSq6PB0fiBz887S3f4nZ3nNFyc82Rqz9OWYzwfH7qSwoMdseDIhx7NUDOrq3+4sHvu1t5c7MqF+ntkPQtZ1UTZWdL+TsSkFE3Aa7qtJeLrJy5wz3rNaDurPZK/u3DnZMyEuuA8zBwAAtKamDeO6uToMJBHLd3HCUxhwqvVhxNNwPafnKdwqQYkZnsKfHxI3PN0LQrb+AYQnAABehAfCk9LxWX6axu17y3dxwpOtKcuatzRnpcJQdCc/5/XY08JTGPR0j1Lw1V6DYOfzpOHJffO0MRFxXq3uqz4AANCqHg5PSmre9i25y3dxwlPbPwd27nFOBoPwlRpUoczU3uQl440/LTylMnYZ8P6eVKmeScnMmsb05qGuWXhqG9kMe54avj7sGpXMfP31AABA63o0PLW199X9eRazfBcrPOmlv11Tp9zoL9tsA7g+n/lzL08NTw1f9lWvpKS/7Ls0Y2ey8T6Yv2Dfenn3pL/EU+NNw1Pd13Z6zpVUjotSOre/l8KXP516AADQqmKEJ2UgJyXzeX+wfBcvPGndMrZSlAtnewD/PPf3R3pqeFL0nlK7Z3VbEXjUtfa+OHtKdah7NY3ensfCk9YtU+sRz6G3RVifjtwLCwAAtB4bnn47f3dv3R/0xtkx/Pewu5U3v5a9H29H88iaKHae6aECAAAvx/8YngAAAJ4/whMAAEAChCcAAIAECE8AAAAJEJ4AAAASIDwBAAAkQHgCAABIgPAEAACQAOEJAAAgAcITAABAbK/kP/neTBjAcfswAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Second Filter - Filter Cars" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="8651c7d9-1e66-493b-8aa0-1d78af0fee5a" Text="[in_SecondSelection]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://suchen.mobile.de/fahrzeuge/search.html?dam=0&amp;sb=rel&amp;vc=Car" CvType="InputBox" DesignTimeRectangle="1585, 1084, 236, 49" DesignTimeScaleFactor="1.350000023841858" ElementType="InputBox" FriendlyName="'INPUT maxMileage'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='INPUT' parentid='{0}' placeholder='*to' /&gt;&quot;, SecondSelector)]" FuzzySelectorArgument="&lt;webctrl tag='INPUT' parentid='maxMileageContainer' placeholder='to' type='' class='form-control form-control--m' aaname='' /&gt;" Guid="4fc90789-7cd1-414d-930d-ca171890e8ee" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPAAAAA1CAYAAAB/cGaVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARqSURBVHhe7d1fTxpZHMbxfSUWFgISCY2kYv2DIohCoRSZdgAHrUJVupGE6GpjVjcaovGiSV/ys+fMQJmRYbPZ4nYO+1x80mbmB7369sw50PrLzIsgiEhNDJhIYQyYSGFjA44vrKBY1qHXD1HfO8Lu/jEReYxrwMWSjqrRwlpqG5G5efj8oZEZIvo5FhaTpuXV9GjAVaOJfFGDPzDruE5E3jCIt9b45AxYrry5guYYJiJvkQHvfNjDh9rBMGC555WPzVx5ibwtlc6b+9/k+tYw4Lc7NXPPax8kIu8piVYrYgWWK/H3gOVpszywsg8SkffIR+ftN2VnwPKjIp42E3mfPLzKbBWdActnavsQEXmTbDWdZcBESmLARApjwEQKY8BECmPARApjwEQKY8BECmPARD8oOBfHXDQGv8u958aAiX7IEup/fEPv8RxZ1/vPa2IBRzYP0DntoPza/T7RdJqSgKP5Ni4uLlBfdr9PNJ3+LwH7wgiEowiFIz9lr0D0PP5NwGGEo2LfHAk7rvsj1l466LfP/r2JBJxrX5jx2p3k+/8c8dcYku/bOPvddv+sg0Z+CSHf6HsRqcUl4GAK9Stx7eEerWzcMZNLGOjeyt9bbtolhP2rqJw/fr8mX3ecj9n+jPEmEnD09Qayux0zzmZ5A8nkBhZj4m8X3zxyR1a0v+0WkIzH8DKRQWnfmu3W1hBweT8idTwJOJJBw4z3Do31QYSDmUfc3Io49R3kigaOr61gr67v0bvuolIU1/Uurh7E9V4H6X+wEk8kYMntETqUPbLifZdwzM68iCC52xX3utB46EVKswVsi7e+bH88Hsx8w7m+MLy+2cGtueJ+QTEymA0iffJVzH5FKz28Ns4zBhxF5lCuvi1kws5ZU0JHV67C2tLoPSJlDOK8FyupFWm3Ih+b3WZE2K9s1181cSkDvjQwZ5ufN+7M9/mct82O8YwBi8dnc29sYPnJrClawImYvxCP0SP3iJQxXF17D+IRuSd/da6ojlXa/tpBwKcl26xnAh6swEfIzjpnTVyBaSrYVtdEEOH8OW5klFcfMT8yo1TAwz3wyGGVL4pUQ8bNPTCp7mmcMWRPrRPlS2N1zEyflwL2p/asWA/LSCUzWIiK67ZT6E5TQzYpT6jz0Npn7mETKcclTv8WWnfimjzMEquyEgHPBFahdaxYpU+5/hE6PwemqTYmzkQ/zj8/YyWoQsCm/retQs5vmJj4TSyiiZtwwET0X2LARApjwEQKY8BECmPARApjwEQKY8BECmPARApjwEQKcw2YP+CbSA2uAev1Q0Tm+v+nFRF5lvwJ/ZvbJWfAb3dqWEttjwwTkbe8rx0gV6g4A44vrKBqtOAPzI68gIi8o/BOh1bddwYsFUu6KFtzDBORt6xv5Kx98GbBGbBUNZrIFzWuxEQeJVfesmaYT8wjAUtyJZY35Z5YHmzxdJrIO2TAi0spsRf+6B6wJPfExbJunk7Lj5jkkk1E3jI2YCLyPgZMpKwg/gKi7eLsLQX4gAAAAABJRU5ErkJggg==" InformativeScreenshot="a6a4381030279edb8abbda10e538eee0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvType="Text" DesignTimeRectangle="1279, 1053, 587, 27" FriendlyName="'Kilometre'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl class='label' tag='LEGEND' aaname='{0}*' innertext='{0}*' visibleinnertext='{0}*' /&gt;&quot;, in_FilterType)]" FuzzySelectorArgument="&lt;webctrl class='label' tag='LEGEND' aaname='Kilometre' innertext='Kilometre' visibleinnertext='Kilometre' type='' check:text='Kilometre' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAk8AAAAfCAYAAAD+1imwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUySURBVHhe7d1hSxtJHMfxeyX6pG8iID4UxHsYEIUgB6WCSJ5YOVAQKyIUipVDAieVEpEjlaKIeEFERGkpSohURCGiRFpYUCp9B/+b3Z3NzCYb3UV6YPw++DzI7Mzsjo9+7Px3/K2t/ZkAAAAgHsITAABAAoQnAACABAhPAAAACRCeAAAAEiA8AQAAJEB4AgAASCAUnroywzI4pDzvk5TV7kqlX/jXlP5u3T87K4u5SUl36H7dA7rPC9MGAADQQkLhabH8U37cKlfbMm61pya2pXKjr12qa24wGlqVivtbcT7N+33fH/l9br9JcdyMBwAAaBX3h6dMXkqObr/cl7mMbn/U4WlBPn+/Fkc5XhuLuA4AABDt7vCUmZfdS93mHMliEJy0hm27RxOeVCD0nvOnVLcmI64DAABEax6eOialaAWn5cHO0MC29h7p1zVQf6T1tTvDU6ekn89Ibqkgy+9mZTTTU3fdqqvSNVddGb9/7tWAdAX9Ovok+yYvy0sLMhUxh089258q2Kmxi2/GajVaHq8ua1WOg/C0N2+twazJG9M9Iq/f5eV11r6PtY7cjFk7AAB4EpqEpwMplq9NEJqICggRb2+ahKeu6U05Drb+LM7JttkGVMa3vvnXrvZlZesi3Lecl8GJxnkq/06Gitv7325H3Otajrfmpd/tU3vGMH8NZk3HW6bOK1hf6mVBSlfhcd71w4KMUiAPAMCTEB2ebCerfuhoEC88ucXm1WCum2uplI+kdKJDkss5kDkdPGrhyeP3rdhByA0zzoWUDk+lGhSw357Kcm/jvZzzA1lfWpXi4YU4uq2qglbb3wderZOZ0659Mmuyr1U21Di79uvqSIofCrK+o55D93UO85L2/i4AAKCV3R+elOMPA6FBvjjhaVhWzvQ8dTVTXW9ViNHjnZ0Zr80OT59z+m1Xb6G2xfbjRgUlPUcqd2D6/lV3r6+FUOCb2tFh6UYFNa8t4tnr2v2tSzPH3Cc9R117+p9Tv/32QtaHTDsAAGhNTcLTtQpMs7L8Nfh9Kit1xeKxwlOHCT7hkOIalvVzPf/ltoyqtlp4qoUc16QUg62yct6MHzdvmUrv1e9eU8dU2SvIsluTFNgLtgCDUHd/eKqsDVvts7L73W93ypvhuTeOaiHQe47aGAAA0IqaF4y7bRkTSBq372KEJyvgVD42vr2qv5+pedL398QMT9bv5uKHp3AQMu13ITwBAND67g5PSnbNFG6Ht+9ihCfrzZOzN2uNdVmh6HxTBlXbg8KT/eZpY9L/aq9BcPJ50vBkvXn6ko+Y1xf6qg8AALSke8NTW/uI2V4Lbd/FCE/tfdbWn2qbDj7575HRj0GtkBt2Rrz2B4Un+zkbzqTqkWxu3qpVMs8eDnXNwlOn5L7oud11hL4+7JT0xILMZe3+AACgVcUIT4q9JVbbvosTnpRsIXx0gHMtjv07+Hcvqu/DwlPdl31K9cz/ss/RX+Y5hwvyuzd+zJxh5ba7X9S5X+I1DU+K/bWdO+byVErlC6kGbeebXt1WaAwAAGg58cJTe6cJNoq/fRczPCmpwXkpnljHAwTj6s5Hemh4cnVNr0rJCkaB6uGqTFlvo/rVswaF3t51bw13hCclNbggu2eN63BO9iX3ksMyAQB4CkLh6ZfzTvd264OsE8N/kdpp5XfdK3gefaJ5ZJ8otXUENVQAAOCp+H/DEwAAwCNHeAIAAEiA8AQAAJAA4QkAACABwhMAAEAChCcAAIAECE8AAAAJEJ4AAAASIDwBAADE9kz+A94bS8oZQNvTAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVJJREFUWEftl9GNgzAQRF2CS6AESqAESuDncvkjHZxLoAPTASVQgkugBErY2zEsMYYfBFakiCeNkqxiZlhDwqoQqpSmh/pjDSzyug7HsqxstltDP6pmjYvx9QGEkfWabSe8eWwsSscUgtue7Z65KB3ohFb0q+yusSgtRrGJ25iGSsuAAPvGosTcAQ4HMMYsGseRrLVUFAVlWeZf+77333POUVmWvp7nOTVN4+sxhwPgzhVVVbX6LOq6jrTWm/peiFMBIJwhFNcRAB0Ja+hEzOkOCDi41BFoGAZfx1aFa2JOBWjbdq7Sajuw9wKukXBNzKkAcsGBMEDYmTvAHeAO8H0B5KcXCgPUdb3U8V7A/0K4JuZwgKu5AyDAewraU1ocApiNaai0WL5neB783GAyzYls9NoYi9IRzYcI8anhVKAnz4kP1bLe09J14BnNsPRsxyj1D8PKR4rCi7qlAAAAAElFTkSuQmCC" InformativeScreenshot="fdb248ac35f6fa0d4c159e596f40a5fd.jpg" Selector="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" Title="Car search on mobile.de – find your vehicle quick and easy" Url="[in_Config(&quot;Mobilede_MoreFiltersUrl&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

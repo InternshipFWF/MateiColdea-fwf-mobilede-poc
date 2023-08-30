@@ -1,0 +1,161 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Mobilede_GetNumberOfResults" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_BRE3" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1840,1177.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Mobilede_GetNumberOfResults_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Mobilede_GetNumberOfResults  - Number of Results" sap:VirtualizedContainerService.HintSize="546,1112.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="numberOfResults" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Number of Results" sap:VirtualizedContainerService.HintSize="484,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Number of Results&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open browser - Number of results" sap:VirtualizedContainerService.HintSize="484,494.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="cbc4a7b1-15b3-45a8-ba12-95c67fe12846" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do- Number Of results" sap:VirtualizedContainerService.HintSize="450,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text number of results" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="cbc4a7b1-15b3-45a8-ba12-95c67fe12846" TextString="[numberOfResults]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://suchen.mobile.de/fahrzeuge/search.html?ref=dsp&amp;scopeId=C&amp;sortOption.sortBy=relevance&amp;name=&amp;email=on&amp;makeModelVariant1.makeId=3500&amp;makeModelVariant1.modelId=&amp;makeModelVariant1.modelDescription=&amp;makeModelVariantExclusions%5B0%5D.makeId=&amp;doorCount=&amp;sld=&amp;usage=&amp;minPrice=5000&amp;maxPrice=&amp;minHu=&amp;numberOfPreviousOwners=&amp;cn=&amp;minRe=&amp;maxCht=&amp;maxChtf=&amp;ignored-power-unit=PS&amp;maxConsumptionCombined=&amp;emissionsSticker=EMISSIONSSTICKER_NONE&amp;emissionClass=EURO1&amp;tct=&amp;spc=&amp;airbag=&amp;climatisation=&amp;adLimitation=&amp;sr=&amp;daysAfterCreation=&amp;damageUnrepaired=NO_DAMAGE_UNREPAIRED&amp;export=&amp;usedCarSeals=&amp;q=&amp;minPowerAsArray=PS&amp;maxPowerAsArray=PS" CvElementArea="1233, 137, 323, 67" CvTextArea="1315, 160, 127, 21" CvTextArgument="14,279 results" CvType="Button" DesignTimeRectangle="1319, 161, 62, 19" DesignTimeScaleFactor="1.350000023841858" ElementType="Text" FriendlyName="'14,279'" FullSelectorArgument="&lt;webctrl aaname='14,279' parentid='dsp-upper-search-btn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='dsp-upper-search-btn' tag='SPAN' type='' class='' /&gt;" Guid="349faad8-e39d-4f03-9c32-0a0c9a3479f2" ImageBase64="" InformativeScreenshot="5b678d8a2d76537d3b6c88843e2fa571.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="14,279 results" CvType="Text" DesignTimeRectangle="1236, 141, 319, 59" ElementType="Button" FriendlyName="'14,279 results'" FullSelectorArgument="&lt;webctrl id='dsp-upper-search-btn' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='dsp-upper-search-btn' tag='BUTTON' type='submit' class='dsp-search-btn btn btn--l btn--primary' aaname='14,279 results' check:innerText='14,279 results' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVJJREFUWEftl9GNgzAQRF2CS6AESqAESuDncvkjHZxLoAPTASVQgkugBErY2zEsMYYfBFakiCeNkqxiZlhDwqoQqpSmh/pjDSzyug7HsqxstltDP6pmjYvx9QGEkfWabSe8eWwsSscUgtue7Z65KB3ohFb0q+yusSgtRrGJ25iGSsuAAPvGosTcAQ4HMMYsGseRrLVUFAVlWeZf+77333POUVmWvp7nOTVN4+sxhwPgzhVVVbX6LOq6jrTWm/peiFMBIJwhFNcRAB0Ja+hEzOkOCDi41BFoGAZfx1aFa2JOBWjbdq7Sajuw9wKukXBNzKkAcsGBMEDYmTvAHeAO8H0B5KcXCgPUdb3U8V7A/0K4JuZwgKu5AyDAewraU1ocApiNaai0WL5neB783GAyzYls9NoYi9IRzYcI8anhVKAnz4kP1bLe09J14BnNsPRsxyj1D8PKR4rCi7qlAAAAAElFTkSuQmCC" InformativeScreenshot="861072f5270af6cad3027b539fbf7ccb.jpg" Selector="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" Title="Car search on mobile.de – find your vehicle quick and easy" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <If Condition="[numberOfResults.Equals(&quot;0&quot;)]" DisplayName="If - number of results" sap:VirtualizedContainerService.HintSize="484,331.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,179.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Throw DisplayName="Throw - BRE3" Exception="[New BusinessRuleException(in_BRE3)]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="300,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>

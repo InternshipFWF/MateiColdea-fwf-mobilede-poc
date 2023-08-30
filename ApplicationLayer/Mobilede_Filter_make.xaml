@@ -1,0 +1,213 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Mobilede_Filter_make" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="in_url" Type="InArgument(x:String)" />
+    <x:Property Name="in_value" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>710,2087.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Mobilede_Filter_make_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Mobilede_Filter_make" sap:VirtualizedContainerService.HintSize="720,2022.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Make Filter" sap:VirtualizedContainerService.HintSize="658,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Make Filter&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Browser - Make Filter" sap:VirtualizedContainerService.HintSize="658,1776" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d8f5f068-1d5c-4314-b6c8-e38d2046dea0" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do Sequence - Make Filter" sap:VirtualizedContainerService.HintSize="624,1556.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="children" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FindChildren Children="[children]" DisplayName="Find Children Make - Make Filter" Filter="&lt;webctrl tag='SELECT' innertext='AnyAbarthACAcuraAiwaysAixamAlfa RomeoALPINAArtegaAsia MotorsAston MartinAudiAustinAustin HealeyBAICBentleyBMWBorgwardBrillianceBugattiBuickBYDCadillacCasaliniCaterhamChatenetChevroletChryslerCitroënCobraCorvetteCupraDaciaDaewooDaihatsuDeTomasoDFSKDodgeDonkervoortDS Automobilese.GOElarisFerrariFiatFiskerFordGAC GonowGemballaGenesisGMCGrecavHamannHoldenHondaHummerHyundaiInfinitiIsuzuIvecoJACJaguarJeepKiaKoenigseggKTMLadaLamborghiniLanciaLand RoverLandwindLEVCLexusLigierLincolnLotusLynk&amp;amp;CoMahindraMANMaseratiMa*' visibleinnertext='Any&amp;#xA;Abarth&amp;#xA;AC&amp;#xA;Acura&amp;#xA;Aiways&amp;#xA;Aixam&amp;#xA;Alfa Romeo&amp;#xA;ALPINA&amp;#xA;Artega&amp;#xA;Asia Motors&amp;#xA;Aston Martin&amp;#xA;Audi&amp;#xA;Austin&amp;#xA;Austin Healey&amp;#xA;BAIC&amp;#xA;Bentley&amp;#xA;BMW&amp;#xA;Borgward&amp;#xA;Brilliance&amp;#xA;Bugatti&amp;#xA;Buick&amp;#xA;BYD&amp;#xA;Cadillac&amp;#xA;Casalini&amp;#xA;Caterham&amp;#xA;Chatenet&amp;#xA;Chevrolet&amp;#xA;Chrysler&amp;#xA;Citroën&amp;#xA;Cobra&amp;#xA;Corvette&amp;#xA;Cupra&amp;#xA;Dacia&amp;#xA;Daewoo&amp;#xA;Daihatsu&amp;#xA;DeTomaso&amp;#xA;DFSK&amp;#xA;Dodge&amp;#xA;Donkervoort&amp;#xA;DS Automobiles&amp;#xA;e.GO&amp;#xA;Elaris&amp;#xA;Ferrari&amp;#xA;Fiat&amp;#xA;Fisker&amp;#xA;Ford&amp;#xA;GAC Gonow&amp;#xA;Gemballa&amp;#xA;Genesis&amp;#xA;GMC&amp;#xA;Grecav&amp;#xA;Hamann&amp;#xA;Holden&amp;#xA;Honda&amp;#xA;Hummer&amp;#xA;Hyundai&amp;#xA;Infiniti&amp;#xA;Isuzu&amp;#xA;Iveco&amp;#xA;JAC&amp;#xA;Jaguar&amp;#xA;Jeep&amp;#xA;Kia&amp;#xA;Koenigsegg&amp;#xA;KTM&amp;#xA;Lada&amp;#xA;Lamborghini&amp;#xA;Lancia&amp;#xA;Land Rover&amp;#xA;Landwind&amp;#xA;LEVC&amp;#xA;Lexus&amp;#xA;Ligier&amp;#xA;Lincoln&amp;#xA;Lotus&amp;#xA;Lynk&amp;amp;Co&amp;#xA;Mahindra&amp;#xA;MAN&amp;#xA;Maserati&amp;#xA;Maxus&amp;#xA;Maybach&amp;#xA;Mazda&amp;#xA;McLaren&amp;#xA;Mercedes-Benz&amp;#xA;MG&amp;#xA;Microcar&amp;#xA;MINI&amp;#xA;Mitsubishi&amp;#xA;Morgan&amp;#xA;NIO&amp;#xA;Nissan&amp;#xA;NSU&amp;#xA;Oldsmobile&amp;#xA;Opel&amp;#xA;ORA&amp;#xA;Pagani&amp;#xA;Peugeot&amp;#xA;Piaggio&amp;#xA;Plymouth&amp;#xA;Polestar&amp;#xA;Pontiac&amp;#xA;Porsche&amp;#xA;Proton&amp;#xA;Renault&amp;#xA;Rolls-Royce&amp;#xA;Rover&amp;#xA;Ruf&amp;#xA;Saab&amp;#xA;Santana&amp;#xA;Seat&amp;#xA;Skoda&amp;#xA;Smart&amp;#xA;speedART&amp;#xA;Spyker&amp;#xA;Ssangyong&amp;#xA;Subaru&amp;#xA;Suzuki&amp;#xA;SWM&amp;#xA;Talbot&amp;#xA;Tata&amp;#xA;TECHART&amp;#xA;Tesla&amp;#xA;Toyota&amp;#xA;Trabant&amp;#xA;Triumph&amp;#xA;TVR&amp;#xA;Volkswagen&amp;#xA;Volvo&amp;#xA;Wartburg&amp;#xA;Westfield&amp;#xA;WEY&amp;#xA;Wiesmann&amp;#xA;Other' /&gt;" sap:VirtualizedContainerService.HintSize="562,107.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+              <ui:FindChildren.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="89999d4a-7a44-43b5-a54c-1dacdf3aaf23" InformativeScreenshot="711ceab09ee02631220a0124d01ccf0f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='form-dsp' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:FindChildren.Target>
+            </ui:FindChildren>
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each - Make Filter" sap:VirtualizedContainerService.HintSize="562,1293.3333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[children]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="ui:UiElement">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="528,1119.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[currentItem.Get(&quot;text&quot;).toString.Equals(&quot;Any&quot;)]" DisplayName="If - Make Filter" sap:VirtualizedContainerService.HintSize="486,1032" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="452,880" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="Exists" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item - Make Filter" sap:VirtualizedContainerService.HintSize="410,141.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" InUiElement="[currentItem]" Item="[in_value]" Version="V3" />
+                          <ui:UiElementExists DisplayName="Element Exists - Make Filter" Exists="[Exists]" sap:VirtualizedContainerService.HintSize="410,107.33333333333333" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5549a441-52dc-4da4-b23d-fae5b0ccd411" InformativeScreenshot="923eb57b1de9cae18ea098dbbfb52295" Selector="&lt;webctrl parentid='form-dsp' tag='A' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <If Condition="[Exists]" DisplayName="If element exists - Make Filter" sap:VirtualizedContainerService.HintSize="410,398.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,246.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Add vehicle - Make Filter" sap:VirtualizedContainerService.HintSize="334,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d8f5f068-1d5c-4314-b6c8-e38d2046dea0" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://suchen.mobile.de/fahrzeuge/search.html?dam=0&amp;sb=rel&amp;vc=Car" CvTextArgument="Add other vehicles" CvType="Text" DesignTimeRectangle="319, 665, 184, 27" DesignTimeScaleFactor="1.350000023841858" ElementType="Text" FriendlyName="'Add other vehicles'" FullSelectorArgument="&lt;webctrl parentid='form-dsp' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='form-dsp' tag='A' type='' class='link--muted mmh-add-row-button mmh-add-incl' aaname='Add other vehicles' check:innerText='Add other vehicles' /&gt;" Guid="e455515c-1451-4dfa-bd2a-b730f2f0a07e" ImageBase64="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" InformativeScreenshot="9ff036ed7652bff05236cc5a3ab15c98.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CvTextArgument="Basic Data" CvType="Text" DesignTimeRectangle="295, 462, 1247, 38" ElementType="Text" FriendlyName="'Basic Data'" FullSelectorArgument="&lt;webctrl id='section-general' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl id='section-general' tag='H3' type='' class='h2 u-margin-bottom-9' aaname='Basic Data' check:innerText='Basic Data' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7" />
+                            </If.Else>
+                          </If>
+                          <ui:Break DisplayName="Break - Make Filter" sap:VirtualizedContainerService.HintSize="410,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="300,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -878, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVJJREFUWEftl9GNgzAQRF2CS6AESqAESuDncvkjHZxLoAPTASVQgkugBErY2zEsMYYfBFakiCeNkqxiZlhDwqoQqpSmh/pjDSzyug7HsqxstltDP6pmjYvx9QGEkfWabSe8eWwsSscUgtue7Z65KB3ohFb0q+yusSgtRrGJ25iGSsuAAPvGosTcAQ4HMMYsGseRrLVUFAVlWeZf+77333POUVmWvp7nOTVN4+sxhwPgzhVVVbX6LOq6jrTWm/peiFMBIJwhFNcRAB0Ja+hEzOkOCDi41BFoGAZfx1aFa2JOBWjbdq7Sajuw9wKukXBNzKkAcsGBMEDYmTvAHeAO8H0B5KcXCgPUdb3U8V7A/0K4JuZwgKu5AyDAewraU1ocApiNaai0WL5neB783GAyzYls9NoYi9IRzYcI8anhVKAnz4kP1bLe09J14BnNsPRsxyj1D8PKR4rCi7qlAAAAAElFTkSuQmCC" InformativeScreenshot="98be95dba8fa2dc5d49fafcd365293ff.jpg" Selector="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" Title="Car search on mobile.de – find your vehicle quick and easy" Url="[in_url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,178 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Mobilede_FilterModel" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="in_url" Type="InArgument(x:String)" />
+    <x:Property Name="in_value" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>634,1501.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Mobilede_FilterModel_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Mobilede_FilterModel" sap:VirtualizedContainerService.HintSize="644,1436.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Filter Model" sap:VirtualizedContainerService.HintSize="582,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Filter Model&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Open Browser - Filter Model" sap:VirtualizedContainerService.HintSize="582,1190" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d8f5f068-1d5c-4314-b6c8-e38d2046dea0" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do sequence - Filter Model" sap:VirtualizedContainerService.HintSize="548,970.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="children" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FindChildren Children="[children]" DisplayName="Find Children Model - Filter Model" Filter="&lt;webctrl name='makeModelVariant1.modelId' tag='SELECT' innertext='Any1 Series    114    116    118    120    123    125    128    130    135    1er M Coupé20022 Series    214 Active Tourer    214 Gran Tourer    216    216 Active Tourer    216 Gran Tourer    218    218 Active Tourer    218 Gran Tourer    220    220 Active Tourer    220 Gran Tourer    223 Active Tourer    225    225 Active Tourer    228    230    2er Gran Coupé3 Series    315    316    318    318 Gran Turismo    320    320 Gran Turismo    323    324    325    325 Gran Turismo    328    328 Gran Turismo    3*' visibleinnertext='Any&amp;#xA;1 Series&amp;#xA;    114&amp;#xA;    116&amp;#xA;    118&amp;#xA;    120&amp;#xA;    123&amp;#xA;    125&amp;#xA;    128&amp;#xA;    130&amp;#xA;    135&amp;#xA;    1er M Coupé&amp;#xA;2002&amp;#xA;2 Series&amp;#xA;    214 Active Tourer&amp;#xA;    214 Gran Tourer&amp;#xA;    216&amp;#xA;    216 Active Tourer&amp;#xA;    216 Gran Tourer&amp;#xA;    218&amp;#xA;    218 Active Tourer&amp;#xA;    218 Gran Tourer&amp;#xA;    220&amp;#xA;    220 Active Tourer&amp;#xA;    220 Gran Tourer&amp;#xA;    223 Active Tourer&amp;#xA;    225&amp;#xA;    225 Active Tourer&amp;#xA;    228&amp;#xA;    230&amp;#xA;    2er Gran Coupé&amp;#xA;3 Series&amp;#xA;    315&amp;#xA;    316&amp;#xA;    318&amp;#xA;    318 Gran Turismo&amp;#xA;    320&amp;#xA;    320 Gran Turismo&amp;#xA;    323&amp;#xA;    324&amp;#xA;    325&amp;#xA;    325 Gran Turismo&amp;#xA;    328&amp;#xA;    328 Gran Turismo&amp;#xA;    330&amp;#xA;    330 Gran Turismo&amp;#xA;    335&amp;#xA;    335 Gran Turismo&amp;#xA;    340&amp;#xA;    340 Gran Turismo&amp;#xA;    ActiveHybrid 3&amp;#xA;4 Series&amp;#xA;    418&amp;#xA;    418 Gran Coupé&amp;#xA;    420&amp;#xA;    420 Gran Coupé&amp;#xA;    425&amp;#xA;    425 Gran Coupé&amp;#xA;    428&amp;#xA;    428 Gran Coupé&amp;#xA;    430&amp;#xA;    430 Gran Coupé&amp;#xA;    435&amp;#xA;    435 Gran Coupé&amp;#xA;    440&amp;#xA;    440 Gran Coupé&amp;#xA;5 Series&amp;#xA;    518&amp;#xA;    520&amp;#xA;    520 Gran Turismo&amp;#xA;    523&amp;#xA;    524&amp;#xA;    525&amp;#xA;    528&amp;#xA;    530&amp;#xA;    530 Gran Turismo&amp;#xA;    535&amp;#xA;    535 Gran Turismo&amp;#xA;    540&amp;#xA;    545&amp;#xA;    550&amp;#xA;    550 Gran Turismo&amp;#xA;    ActiveHybrid 5&amp;#xA;6 Series&amp;#xA;    620 Gran Turismo&amp;#xA;    628&amp;#xA;    630&amp;#xA;    630 Gran Turismo&amp;#xA;    633&amp;#xA;    635&amp;#xA;    640&amp;#xA;    640 Gran Coupé&amp;#xA;    640 Gran Turismo&amp;#xA;    645&amp;#xA;    650&amp;#xA;    650 Gran Coupé&amp;#xA;7 Series&amp;#xA;    725&amp;#xA;    728&amp;#xA;    730&amp;#xA;    732&amp;#xA;    735&amp;#xA;    740&amp;#xA;    745&amp;#xA;    750&amp;#xA;    760&amp;#xA;    ActiveHybrid 7&amp;#xA;840&amp;#xA;850&amp;#xA;i3&amp;#xA;i4&amp;#xA;i7&amp;#xA;i8&amp;#xA;iX&amp;#xA;iX1&amp;#xA;iX3&amp;#xA;M Models&amp;#xA;    M135&amp;#xA;    M140i&amp;#xA;    M2&amp;#xA;    M235&amp;#xA;    M240i&amp;#xA;    M3&amp;#xA;    M340i&amp;#xA;    M4&amp;#xA;    M440&amp;#xA;    M5&amp;#xA;    M550&amp;#xA;    M6&amp;#xA;    M760&amp;#xA;    M8&amp;#xA;    M850&amp;#xA;X Series&amp;#xA;    ActiveHybrid X6&amp;#xA;    X1&amp;#xA;    X2&amp;#xA;    X3&amp;#xA;    X3 M&amp;#xA;    X3 M40&amp;#xA;    X4&amp;#xA;    X4 M&amp;#xA;    X4 M40&amp;#xA;    X5&amp;#xA;    X5 M&amp;#xA;    X5 M50&amp;#xA;    X5 M60&amp;#xA;    X6&amp;#xA;    X6 M&amp;#xA;    X6 M50&amp;#xA;    X6 M60&amp;#xA;    X7&amp;#xA;    X7 M50&amp;#xA;    XM&amp;#xA;Z Series&amp;#xA;    Z1&amp;#xA;    Z3&amp;#xA;    Z3 M&amp;#xA;    Z4&amp;#xA;    Z4 M&amp;#xA;    Z8&amp;#xA;Other' /&gt;" sap:VirtualizedContainerService.HintSize="486,107.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+              <ui:FindChildren.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="89999d4a-7a44-43b5-a54c-1dacdf3aaf23" InformativeScreenshot="711ceab09ee02631220a0124d01ccf0f" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='form-dsp' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:FindChildren.Target>
+            </ui:FindChildren>
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each - Filter Model" sap:VirtualizedContainerService.HintSize="486,707.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[children]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="ui:UiElement">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,533.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[currentItem.Get(&quot;text&quot;).toString.Equals(&quot;Any&quot;)]" DisplayName="If- Filter Model" sap:VirtualizedContainerService.HintSize="410,446" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,294" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item - Filter Model" sap:VirtualizedContainerService.HintSize="334,141.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" InUiElement="[currentItem]" Item="[in_value]" Version="V3" />
+                          <ui:Break DisplayName="Break - Filter Model" sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Break_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5" />
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -878, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVJJREFUWEftl9GNgzAQRF2CS6AESqAESuDncvkjHZxLoAPTASVQgkugBErY2zEsMYYfBFakiCeNkqxiZlhDwqoQqpSmh/pjDSzyug7HsqxstltDP6pmjYvx9QGEkfWabSe8eWwsSscUgtue7Z65KB3ohFb0q+yusSgtRrGJ25iGSsuAAPvGosTcAQ4HMMYsGseRrLVUFAVlWeZf+77333POUVmWvp7nOTVN4+sxhwPgzhVVVbX6LOq6jrTWm/peiFMBIJwhFNcRAB0Ja+hEzOkOCDi41BFoGAZfx1aFa2JOBWjbdq7Sajuw9wKukXBNzKkAcsGBMEDYmTvAHeAO8H0B5KcXCgPUdb3U8V7A/0K4JuZwgKu5AyDAewraU1ocApiNaai0WL5neB783GAyzYls9NoYi9IRzYcI8anhVKAnz4kP1bLe09J14BnNsPRsxyj1D8PKR4rCi7qlAAAAAElFTkSuQmCC" InformativeScreenshot="98be95dba8fa2dc5d49fafcd365293ff.jpg" Selector="&lt;html app='msedge.exe' title='Car search on mobile.de – find your vehicle quick and easy' /&gt;" Title="Car search on mobile.de – find your vehicle quick and easy" Url="[in_url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
