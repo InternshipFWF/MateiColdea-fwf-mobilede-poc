@@ -1,0 +1,132 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Mobilede_ExtractData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_dtCars" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1840,1177.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Mobilede_ExtractData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Mobilede_ExtractData" sap:VirtualizedContainerService.HintSize="496,626" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Extract Data" sap:VirtualizedContainerService.HintSize="434,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Extract Data&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser - Extract Data" sap:VirtualizedContainerService.HintSize="434,379.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="067eedaf-9636-457c-9ebf-37126fee9530" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_dtCars]" DisplayName="Extract Table Data - Extract Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Name' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Kilometre/Year' ReferenceName='Column1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Price' ReferenceName='Column2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Link' ReferenceName='Column3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="067eedaf-9636-457c-9ebf-37126fee9530" Version="V3">
+            <uix:NExtractData.NextLink>
+              <uix:TargetAnchorable BrowserURL="https://suchen.mobile.de/fahrzeuge/search.html?dam=0&amp;emc=EURO1&amp;ems=EMISSIONSSTICKER_NONE&amp;isSearchRequest=true&amp;ml=1000%3A&amp;ms=3500%3B%3B21%3B%3B&amp;ref=dsp&amp;s=Car&amp;sb=rel&amp;vc=Car" CvElementArea="1192, 323, 193, 64" CvTextArea="1213, 343, 122, 19" CvTextArgument="Further offers" CvType="Button" DesignTimeRectangle="1194, 326, 192, 59" DesignTimeScaleFactor="1.350000023841858" FriendlyName="'Further offers'" FullSelectorArgument="&lt;webctrl id='page-forward' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='page-forward' tag='SPAN' type='' class='btn btn--primary btn--l next-resultitems-page' aaname='Further offers' check:innerText='Further offers' /&gt;" Guid="01d7b68e-5c54-4598-9a59-40638e5e35c8" ImageBase64="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" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMW | Buy a Car at mobile.de' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+            </uix:NExtractData.NextLink>
+            <uix:NExtractData.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="582, -2977, 1008, 11452" DesignTimeScaleFactor="1.350000023841858" FriendlyName="'14,277 resultsAdjust'" FullSelectorArgument="&lt;webctrl class='g-col-9' tag='DIV' /&gt;" Guid="c2188416-38c8-4164-afbc-d43e506e055d" InformativeScreenshot="22ce7c03f6c42a08ce15285732cf8e29.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BMW | Buy a Car at mobile.de' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+            </uix:NExtractData.Target>
+          </uix:NExtractData>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVJJREFUWEftl9GNgzAQRF2CS6AESqAESuDncvkjHZxLoAPTASVQgkugBErY2zEsMYYfBFakiCeNkqxiZlhDwqoQqpSmh/pjDSzyug7HsqxstltDP6pmjYvx9QGEkfWabSe8eWwsSscUgtue7Z65KB3ohFb0q+yusSgtRrGJ25iGSsuAAPvGosTcAQ4HMMYsGseRrLVUFAVlWeZf+77333POUVmWvp7nOTVN4+sxhwPgzhVVVbX6LOq6jrTWm/peiFMBIJwhFNcRAB0Ja+hEzOkOCDi41BFoGAZfx1aFa2JOBWjbdq7Sajuw9wKukXBNzKkAcsGBMEDYmTvAHeAO8H0B5KcXCgPUdb3U8V7A/0K4JuZwgKu5AyDAewraU1ocApiNaai0WL5neB783GAyzYls9NoYi9IRzYcI8anhVKAnz4kP1bLe09J14BnNsPRsxyj1D8PKR4rCi7qlAAAAAElFTkSuQmCC" InformativeScreenshot="fbf4d082679481f33c660eca82abcc9f.jpg" Selector="&lt;html app='msedge.exe' title='BMW | Buy a Car at mobile.de' /&gt;" Title="BMW | Buy a Car at mobile.de" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
